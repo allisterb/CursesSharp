@@ -22,11 +22,13 @@
 #include <stdint.h>
 #include "wrapper.h"
 
+#ifndef WIN32
 WRAP_API void 
 wrap_sendsigtstp ()
 {
     killpg (0, SIGTSTP);
 }
+#endif
 
 WRAP_API const char *
 wrap_unctrl(unsigned int c)

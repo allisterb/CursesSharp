@@ -39,7 +39,7 @@ wrap_killchar(void)
 	return killchar();
 }
 
-WRAP_API unsigned int
+WRAP_API chtype
 wrap_termattrs(void)
 {
 	return termattrs();

@@ -45,11 +45,11 @@ namespace CursesSharp.Internal
             InternalException.Verify(ret, "copywin");
         }
 
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_overlay(IntPtr src_w, IntPtr dst_w);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_overwrite(IntPtr src_w, IntPtr dst_w);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_copywin(IntPtr src_w, IntPtr dst_w, int src_tr, int src_tc, int dst_tr, int dst_tc, int dst_br, int dst_bc, Boolean overlay);
     }
 }

@@ -39,9 +39,9 @@ namespace CursesSharp.Internal
             InternalException.Verify(ret, "mvwinsnstr");
         }
 
-        [DllImport("CursesWrapper", CharSet = CharSet.Unicode)]
+        [DllImport("CursesWrapper", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_winsnstr(IntPtr win, String str, int n);
-        [DllImport("CursesWrapper", CharSet = CharSet.Unicode)]
+        [DllImport("CursesWrapper", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_mvwinsnstr(IntPtr win, int y, int x, String str, int n);
     }
 }

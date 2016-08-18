@@ -57,15 +57,15 @@ namespace CursesSharp.Internal
             InternalException.Verify(ret, "wredrawln");
         }
 
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_wrefresh(IntPtr win);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_wnoutrefresh(IntPtr win);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_doupdate();
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_redrawwin(IntPtr win);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_wredrawln(IntPtr win, int beg_line, int num_lines);
     }
 }

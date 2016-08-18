@@ -1,8 +1,13 @@
 #ifndef CURSES_SHARP_WRAPPER_H
+
 #define CURSES_SHARP_WRAPPER_H
 
 #ifdef HAVE_CONFIG_H
-#include <config.h>
+# if defined(WIN32)
+#  include "win32/config.h"
+#else
+#  include "config.h"
+#  endif
 #endif
 
 #if defined(CURSES_WIDE)

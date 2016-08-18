@@ -63,17 +63,17 @@ namespace CursesSharp.Internal
             InternalException.Verify(ret, "mvwvline");
         }
 
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_wborder(IntPtr win, uint ls, uint rs, uint ts, uint bs, uint tl, uint tr, uint bl, uint br);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_box(IntPtr win, uint verch, uint horch);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_whline(IntPtr win, uint ch, int n);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_wvline(IntPtr win, uint ch, int n);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_mvwhline(IntPtr win, int y, int x, uint ch, int n);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_mvwvline(IntPtr win, int y, int x, uint ch, int n);
     }
 }

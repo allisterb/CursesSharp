@@ -214,12 +214,12 @@ namespace MouselessCommander
 			SetFocus (left);
 		}
 
-		[System.Runtime.InteropServices.DllImportAttribute ("libc")]
-		extern static void setlocale (int code, string str);
+		//[System.Runtime.InteropServices.DllImportAttribute ("libc")]
+		//extern static void setlocale (int code, string str);
 
 		static void Main ()
 		{
-			setlocale (6, "");
+			//setlocale (6, "");
 			Terminal.Init (false);
 					
 			var s = new Shell ();

@@ -39,9 +39,9 @@ namespace CursesSharp.Internal
             InternalException.Verify(ret, "flash");
         }
 
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_beep();
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_flash();
     }
 }

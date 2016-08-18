@@ -51,13 +51,13 @@ namespace CursesSharp.Internal
             InternalException.Verify(ret, "wclrtoeol");
         }
 
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_wclear(IntPtr win);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_werase(IntPtr win);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_wclrtobot(IntPtr win);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_wclrtoeol(IntPtr win);
     }
 }

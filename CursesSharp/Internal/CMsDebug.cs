@@ -37,9 +37,9 @@ namespace CursesSharp.Internal
             wrap_traceoff();
         }
 
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern void wrap_traceon();
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern void wrap_traceoff();
     }
 }

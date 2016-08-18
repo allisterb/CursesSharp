@@ -41,9 +41,9 @@ namespace CursesSharp.Internal
             return ret;
         }
 
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_winchnstr(IntPtr win, uint[] ch, int n);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_mvwinchnstr(IntPtr win, int y, int x, uint[] ch, int n);
     }
 }

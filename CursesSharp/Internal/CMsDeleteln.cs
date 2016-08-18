@@ -45,11 +45,11 @@ namespace CursesSharp.Internal
             InternalException.Verify(ret, "winsertln");
         }
 
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_wdeleteln(IntPtr win);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_winsdelln(IntPtr win, int n);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_winsertln(IntPtr win);
     }
 }

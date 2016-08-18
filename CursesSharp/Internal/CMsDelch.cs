@@ -39,9 +39,9 @@ namespace CursesSharp.Internal
             InternalException.Verify(ret, "mvwdelch");
         }
 
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_wdelch(IntPtr win);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_mvwdelch(IntPtr win, int y, int x);
     }
 }

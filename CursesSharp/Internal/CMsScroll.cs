@@ -39,9 +39,9 @@ namespace CursesSharp.Internal
             InternalException.Verify(ret, "wscrl");
         }
 
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_scroll(IntPtr win);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_wscrl(IntPtr win, int n);
     }
 }

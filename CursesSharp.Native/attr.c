@@ -22,19 +22,19 @@
 
 
 WRAP_API int
-wrap_wattroff(WINDOW *win, unsigned int attrs)
+wrap_wattroff(WINDOW *win, uint32_t attrs)
 {
 	return wattroff(win, attrs);
 }
 
 WRAP_API int
-wrap_wattron(WINDOW *win, unsigned int attrs)
+wrap_wattron(WINDOW *win, uint32_t attrs)
 {
 	return wattron(win, attrs);
 }
 
 WRAP_API int
-wrap_wattrset(WINDOW *win, unsigned int attrs)
+wrap_wattrset(WINDOW *win, uint32_t attrs)
 {
 	return wattrset(win, attrs);
 }
@@ -58,19 +58,19 @@ wrap_wcolor_set(WINDOW *win, short color_pair)
 }
 
 WRAP_API int
-wrap_wattr_get(WINDOW *win, unsigned int *attrs, short *color_pair)
+wrap_wattr_get(WINDOW *win, uint32_t *attrs, short *color_pair)
 {
 	return wattr_get(win, (attr_t*)attrs, color_pair, 0);
 }
 
 WRAP_API int
-wrap_wchgat(WINDOW *win, int n, unsigned int attr, short color)
+wrap_wchgat(WINDOW *win, int n, uint32_t attr, short color)
 {
 	return wchgat(win, n, attr, color, 0);
 }
 
 WRAP_API int
-wrap_mvwchgat(WINDOW *win, int y, int x, int n, unsigned int attr, short color)
+wrap_mvwchgat(WINDOW *win, int y, int x, int n, uint32_t attr, short color)
 {
 	return mvwchgat(win, y, x, n, attr, color, 0);
 }

@@ -59,15 +59,15 @@ namespace CursesSharp.Internal
             InternalException.Verify(ret, "pechochar");
         }
 
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern IntPtr wrap_newpad(int nlines, int ncols);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern IntPtr wrap_subpad(IntPtr orig, int nlines, int ncols, int begy, int begx);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_prefresh(IntPtr win, int py, int px, int sy1, int sx1, int sy2, int sx2);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_pnoutrefresh(IntPtr win, int py, int px, int sy1, int sx1, int sy2, int sx2);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_pechochar(IntPtr pad, uint ch);
     }
 }

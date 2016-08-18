@@ -47,13 +47,13 @@ namespace CursesSharp.Internal
             wrap_getmaxyx(win, out y, out x);
         }
 
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern void wrap_getyx(IntPtr win, out int y, out int x);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern void wrap_getparyx(IntPtr win, out int y, out int x);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern void wrap_getbegyx(IntPtr win, out int y, out int x);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern void wrap_getmaxyx(IntPtr win, out int y, out int x);
     }
 }

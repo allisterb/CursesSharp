@@ -39,9 +39,9 @@ namespace CursesSharp.Internal
             return wrap_has_key(key);
         }
 
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern IntPtr wrap_keyname(int key);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern Boolean wrap_has_key(int key);
     }
 }

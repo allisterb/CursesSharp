@@ -32,12 +32,13 @@ wrap_curscr()
 	return curscr;
 }
 
+#ifdef HAVE_NCURSES_H
 WRAP_API WINDOW *
 wrap_newscr()
 {
-	return newscr;
+	return n;
 }
-
+#endif
 
 WRAP_API WINDOW *
 wrap_newwin(int nlines, int ncols, int begy, int begx)

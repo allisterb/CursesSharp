@@ -33,7 +33,7 @@ namespace CursesSharp.Internal
             InternalException.Verify(ret, "wmove");
         }
 
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_wmove(IntPtr win, int y, int x);
     }
 }

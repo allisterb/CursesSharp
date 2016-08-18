@@ -29,10 +29,34 @@
     <PlatformTarget>x64</PlatformTarget>
     <DefineConstants>HAVE_CURSES_MOUSE</DefineConstants>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>HAVE_CURSES_MOUSE;HAVE_CURSES_PANEL</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug x86|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug x86\</OutputPath>
+    <DefineConstants>DEBUG;HAVE_CURSES_MOUSE;HAVE_CURSES_PANEL</DefineConstants>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug x86|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug x86\</OutputPath>
+    <DefineConstants>HAVE_CURSES_MOUSE;HAVE_CURSES_PANEL</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DefsGen.cs" />
     <Compile Include="Internal\CMsAddch.cs" />
     <Compile Include="Internal\CMsAddchstr.cs" />
     <Compile Include="Internal\CMsAddstr.cs" />
@@ -76,7 +100,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Curses.cs" />
     <Compile Include="src\CursesException.cs" />
-    <Compile Include="src\DefsGen.cs" />
     <Compile Include="src\Pad.cs" />
     <Compile Include="src\Panel.cs" />
     <Compile Include="src\SoftLabels.cs" />
@@ -85,7 +108,5 @@
     <Compile Include="src\WindowBase.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="src\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>

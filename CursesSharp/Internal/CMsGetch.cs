@@ -49,13 +49,13 @@ namespace CursesSharp.Internal
             InternalException.Verify(ret, "flushinp");
         }
 
-        [DllImport("CursesWrapper", CharSet = CharSet.Ansi)]
+        [DllImport("CursesWrapper", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_wgetch(IntPtr win);
-        [DllImport("CursesWrapper", CharSet = CharSet.Ansi)]
+        [DllImport("CursesWrapper", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_mvwgetch(IntPtr win, int y, int x);
-        [DllImport("CursesWrapper", CharSet = CharSet.Ansi)]
+        [DllImport("CursesWrapper", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_ungetch(int ch);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_flushinp();
     }
 }

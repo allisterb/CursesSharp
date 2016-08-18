@@ -75,19 +75,19 @@ namespace CursesSharp.Internal
             return wrap_mouseinterval(wait);
         }
 
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern Boolean wrap_has_mouse();
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_getmouse(out WrapMEvent wrap_mevent);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_ungetmouse(ref WrapMEvent wrap_mevent);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern uint wrap_mousemask(uint mask, out uint oldmask);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern Boolean wrap_wenclose(IntPtr win, int y, int x);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern Boolean wrap_wmouse_trafo(IntPtr win, ref int y, ref int x, Boolean to_screen);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_mouseinterval(int wait);
     }
 #endif

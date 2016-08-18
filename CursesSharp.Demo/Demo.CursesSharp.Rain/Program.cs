@@ -31,17 +31,22 @@ namespace RainDemo
             rng = new Random();
             if (Curses.HasColors)
             {
+                
                 Curses.StartColor();
-                short bg = Colors.BLACK;
-                try
-                {
-                    Curses.UseDefaultColors();
-                    bg = -1;
-                }
-                catch (CursesException) { }
-                Curses.InitPair(1, Colors.BLUE, bg);
-                Curses.InitPair(2, Colors.CYAN, bg);
+                short bg = Colors.WHITE;
+                //Curses.UseDefaultColors();
+                //    try
+                //    {
+                //        Curses.UseDefaultColors();
+                //        bg = -1;
+                //    }
+                //    catch (CursesException) { }
+                Curses.UseDefaultColors();
+                bg = -1;
+                Curses.InitPair(1, Colors.GREEN, bg);
+                Curses.InitPair(2, Colors.MAGENTA, bg);
             }
+
             Curses.Newlines = true;
             Curses.Echo = false;
             Curses.CursorVisibility = 0;

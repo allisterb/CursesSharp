@@ -55,15 +55,15 @@ namespace CursesSharp.Internal
 			wrap_sendsigtstp ();
 		}
 
-		[DllImport("CursesWrapper")]
+		[DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
 		private static extern void wrap_sendsigtstp ();
-		[DllImport("CursesWrapper")]
+		[DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern IntPtr wrap_unctrl(uint c);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern void wrap_filter();
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern void wrap_use_env(Boolean x);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_delay_output(int ms);
     }
 }

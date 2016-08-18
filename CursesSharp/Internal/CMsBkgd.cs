@@ -43,11 +43,11 @@ namespace CursesSharp.Internal
             wrap_wbkgdset(win, ch);
         }
 
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern uint wrap_getbkgd(IntPtr win);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_wbkgd(IntPtr win, uint ch);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern void wrap_wbkgdset(IntPtr win, uint ch);
     }
 }

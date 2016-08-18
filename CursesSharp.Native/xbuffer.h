@@ -2,7 +2,11 @@
 #define CURSES_SHARP_XBUFFER_H
 
 #ifdef HAVE_CONFIG_H
-#include <config.h>
+# if defined(WIN32)
+#  include "win32/config.h"
+#else
+#  include "config.h"
+#  endif
 #endif
 
 #include <assert.h>

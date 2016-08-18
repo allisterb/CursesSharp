@@ -115,33 +115,33 @@ namespace CursesSharp.Internal
             wrap_wsyncdown(win);
         }
 
-		[DllImport("CursesWrapper")]
+		[DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
 		private static extern IntPtr wrap_stdscr();
-		[DllImport("CursesWrapper")]
+		[DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
 		private static extern IntPtr wrap_curscr();
-		[DllImport("CursesWrapper")]
+		[DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
 		private static extern IntPtr wrap_newscr();
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern IntPtr wrap_newwin(int nlines, int ncols, int begy, int begx);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern IntPtr wrap_derwin(IntPtr orig, int nlines, int ncols, int begy, int begx);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern IntPtr wrap_subwin(IntPtr orig, int nlines, int ncols, int begy, int begx);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern IntPtr wrap_dupwin(IntPtr win);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_delwin(IntPtr win);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_mvwin(IntPtr win, int y, int x);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_mvderwin(IntPtr win, int pary, int parx);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern int wrap_syncok(IntPtr win, Boolean bf);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern void wrap_wsyncup(IntPtr win);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern void wrap_wcursyncup(IntPtr win);
-        [DllImport("CursesWrapper")]
+        [DllImport("CursesWrapper", CallingConvention = CallingConvention.Cdecl)]
         private static extern void wrap_wsyncdown(IntPtr win);
     }
 }
